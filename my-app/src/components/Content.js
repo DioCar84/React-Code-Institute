@@ -24,8 +24,7 @@ class Content extends Component {
     }
 
     changeHandler = (event) => {
-      let {value} = event.target;
-      const searchName = value.toLowerCase();
+      const searchName = event.target.value.toLowerCase();
       let filteredPosts = savedPosts.filter((post) => post.name.toLowerCase().includes(searchName))
       this.setState({
         posts: filteredPosts
